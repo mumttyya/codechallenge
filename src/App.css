@@ -1,0 +1,75 @@
+
+.App {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9); 
+  min-height: 100vh;
+}
+
+.goal-list-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.goal-list-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2e7d32; 
+  position: relative;
+  display: inline-block;
+}
+
+.goal-list-heading::after {
+  content: '';
+  display: block;
+  margin: 0.5rem auto 0;
+  width: 60%;
+  height: 2px;
+  background-color: #81c784; 
+}
+
+
+.goal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.goal-card {
+  background: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.goal-card:hover {
+  transform: scale(1.02);
+}
+
+.goal-card input {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+
+.progress-bar-container {
+  background: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
