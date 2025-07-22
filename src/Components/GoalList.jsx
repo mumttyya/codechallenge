@@ -1,4 +1,4 @@
-import React from 'react';
+import React from  'react';
 import GoalCard from './GoalCard';
 
 function GoalList({ goals, onUpdateGoal, onDeleteGoal }) {
