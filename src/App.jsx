@@ -8,14 +8,14 @@ function App() {
   const [goals, setGoals] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/goals')
+    fetch('https://codechallenge-db.onrender.com/goals')
       .then(res => res.json())
       .then(setGoals)
       .catch(console.error);
   }, []);
 
   const addGoal = newGoal => {
-    fetch('http://localhost:3000/goals', {
+    fetch('https://codechallenge-db.onrender.com/goals', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newGoal),
@@ -25,7 +25,7 @@ function App() {
   };
 
   const updateGoal = (id, updatedData) => {
-    fetch(`http://localhost:3000/goals/${id}`, {
+    fetch(`https://codechallenge-db.onrender.com/goals/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedData),
@@ -37,7 +37,7 @@ function App() {
   };
 
   const deleteGoal = id => {
-    fetch(`http://localhost:3000/goals/${id}`, {
+    fetch(`https://codechallenge-db.onrender.com/goals/${id}`, {
       method: 'DELETE',
     }).then(() => setGoals(goals.filter(goal => goal.id !== id)));
   };
